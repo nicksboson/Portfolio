@@ -124,6 +124,27 @@ themeToggle.addEventListener('click', () => {
     icon.classList.toggle('fa-sun');
 });
 
+// Resume link handling
+document.addEventListener('DOMContentLoaded', () => {
+    const resumeLink = document.querySelector('a[href="Resume.pdf"]');
+    if (resumeLink) {
+        resumeLink.addEventListener('click', (e) => {
+            // Check if the PDF file exists
+            fetch('Resume.pdf')
+                .then(response => {
+                    if (!response.ok) {
+                        e.preventDefault();
+                        alert('Resume PDF not found. Please ensure the file is in the same directory as the HTML file.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error accessing resume:', error);
+                    // Don't prevent default - let the browser handle it
+                });
+        });
+    }
+});
+
 // Initialize typing effect when page loads
 window.addEventListener('load', () => {
     typeEffect(heroTitle, heroTitle.textContent, 100);
