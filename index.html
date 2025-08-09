@@ -7,6 +7,10 @@
     <meta name="description" content="Nikhil Garkoti's professional portfolio showcasing education, skills, projects, and achievements">
     <title>Nikhil Garkoti | Computer Science Engineer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,7 +19,15 @@
     <header>
         <div class="container">
             <nav class="navbar">
-                <div class="logo">Nikhil<span>Garkoti</span></div>
+                <div class="logo">
+                    <i class="fas fa-code"></i>
+                    Nikhil<span>Garkoti</span>
+                </div>
+                <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
                 <div class="nav-links">
                     <a href="#about">About</a>
                     <a href="#education">Education</a>
@@ -23,6 +35,11 @@
                     <a href="#skills">Skills</a>
                     <a href="#projects">Projects</a>
                     <a href="#contact">Contact</a>
+                    <div class="theme-toggle-container">
+                        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -36,8 +53,12 @@
                 <div class="hero-subtitle">B.Tech. (Computer Science & Engineering)</div>
                 <p>1st Year Student At Indian Institute of Information Technology, Sonepat</p>
                 <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Contact Me</a>
-                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Contact Me
+                    </a>
+                    <a href="#projects" class="btn btn-outline">
+                        <i class="fas fa-laptop-code"></i> View Projects
+                    </a>
                     <a href="nikhil-garkoti-resume.pdf" target="_blank" class="btn btn-outline" download="Nikhil_Garkoti_Resume.pdf">
                         <i class="fas fa-file-pdf"></i> Download Resume
                     </a>
@@ -49,14 +70,14 @@
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>About Me</h2>
             </div>
             <div class="about-content">
-                <div class="about-image">
+                <div class="about-image animate-on-scroll delay-1">
                     <img src="https://images.unsplash.com/photo-1571171637578-41bc2dd41cd2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Nikhil Garkoti">
                 </div>
-                <div class="about-text">
+                <div class="about-text animate-on-scroll delay-2">
                     <h3>Who I Am</h3>
                     <p>I'm a passionate Computer Science student at IIIT Sonepat with a strong foundation in programming and problem-solving. I'm dedicated to continuous learning and applying my skills to real-world challenges.</p>
                     <p>When I'm not coding, you can find me solving problems on various coding platforms, contributing to open-source projects, or exploring new technologies.</p>
@@ -79,27 +100,27 @@
     <!-- Education Section -->
     <section id="education" class="education">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>Education</h2>
             </div>
             <div class="education-grid">
-                <div class="education-card">
-                    <h3>Indian Institute of Information Technology, Sonepat</h3>
-                    <div class="date">2024 - 2028 (Expected)</div>
+                <div class="education-card animate-on-scroll delay-1">
+                    <h3>&nbsp;&nbsp;Indian Institute of Information Technology, Sonepat</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> 2024 - 2028 (Expected)</div>
                     <p>B.Tech in Computer Science & Engineering</p>
-                    <div class="marks">CGPA: 9.4583 (1st Year)</div>
+                    <div class="marks"><i class="fas fa-star"></i> CGPA: 9.4583 (1st Year)</div>
                 </div>
-                <div class="education-card">
-                    <h3>St. Francis Senior Secondary School, Tanakpur</h3>
-                    <div class="date">2022 (Class 12 - CBSE)</div>
+                <div class="education-card animate-on-scroll delay-2">
+                    <h3>&nbsp;&nbsp;St. Francis Senior Secondary School, Tanakpur</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> 2022 (Class 12 - CBSE)</div>
                     <p>Senior Secondary Education</p>
-                    <div class="marks">Percentage: 96%</div>
+                    <div class="marks"><i class="fas fa-star"></i> Percentage: 96%</div>
                 </div>
-                <div class="education-card">
-                    <h3>St. Francis Senior Secondary School, Tanakpur</h3>
-                    <div class="date">2020 (Class 10 - CBSE)</div>
+                <div class="education-card animate-on-scroll delay-3">
+                    <h3>&nbsp;&nbsp;St. Francis Senior Secondary School, Tanakpur</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> 2020 (Class 10 - CBSE)</div>
                     <p>Secondary Education</p>
-                    <div class="marks">Percentage: 96%</div>
+                    <div class="marks"><i class="fas fa-star"></i> Percentage: 96%</div>
                 </div>
             </div>
         </div>
@@ -108,37 +129,38 @@
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>Internships & Workshops</h2>
             </div>
             <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Blockchain Developer Workshop</h3>
-                    <div class="date">IIT Delhi Technopark (ICP Hub India)</div>
+                <div class="experience-card animate-on-scroll delay-1">
+                    <h3>&nbsp;&nbsp;Blockchain Developer Workshop</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> IIT Delhi Technopark (ICP Hub India)</div>
                     <ul>
                         <li>Completed Level 1 Blockchain Developer certification</li>
                         <li>Gained hands-on experience with blockchain fundamentals</li>
                     </ul>
                 </div>
-                <div class="experience-card">
-                    <h3>Machine Learning Workshop</h3>
-                    <div class="date">IIT Roorkee</div>
+                <div class="experience-card animate-on-scroll delay-2">
+                    <h3>&nbsp;&nbsp;Machine Learning Workshop</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> IIT Roorkee</div>
                     <ul>
                         <li>Learned fundamentals of machine learning algorithms</li>
                         <li>Worked on practical ML applications</li>
                     </ul>
                 </div>
-                
+            </div>
+        </div>
     </section>
 
     <!-- Skills Section -->
     <section id="skills" class="skills-section">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>Skills & Expertise</h2>
             </div>
             <div class="skills-container">
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll delay-1">
                     <h3>Programming Languages</h3>
                     <ul class="skill-list">
                         <li>C (Intermediate)</li>
@@ -146,7 +168,7 @@
                         <li>Python</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll delay-2">
                     <h3>Frontend Development</h3>
                     <ul class="skill-list">
                         <li>HTML</li>
@@ -155,7 +177,7 @@
                         <li>Bootstrap</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll delay-1">
                     <h3>Backend & Database</h3>
                     <ul class="skill-list">
                         <li>Node.js</li>
@@ -164,7 +186,7 @@
                         <li>MongoDB</li>
                     </ul>
                 </div>
-                <div class="skill-category">
+                <div class="skill-category animate-on-scroll delay-2">
                     <h3>Tools & Platforms</h3>
                     <ul class="skill-list">
                         <li>Git</li>
@@ -179,156 +201,188 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-title">
-                <h2>Projects</h2>
+<section id="projects" class="projects">
+    <div class="container">
+        <div class="section-title animate-on-scroll">
+            <h2>Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card animate-on-scroll delay-1">
+                <div class="project-image">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <div class="project-content">
+                    <h3>WanderLust - Travel Website</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Jan 2025 - Present</div>
+                    <ul>
+                        <li>Developed a comprehensive vacation rental platform inspired by Airbnb with full-stack implementation</li>
+                        <li>Implemented user authentication, property management with CRUD operations, and interactive review system</li>
+                        <li>Integrated geolocation services, cloud-based media handling, and responsive design</li>
+                        <li>Technologies: Node.js, Express.js, MongoDB, EJS, Bootstrap 5, Passport.js, Cloudinary</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://wanderlust-8bks.onrender.com/listings" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-plane"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>WanderLust - Travel Website </h3>
-                        <div class="date">Jan 2025 - Present</div>
-                        <ul>
-                            <li>Developed a comprehensive vacation rental platform inspired by Airbnb with full-stack implementation</li>
-                            <li>Implemented user authentication, property management with CRUD operations, and interactive review system</li>
-                            <li>Integrated geolocation services, cloud-based media handling, and responsive design</li>
-                            <li>Technologies: Node.js, Express.js, MongoDB, EJS, Bootstrap 5, Passport.js, Cloudinary</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://wanderlust-8bks.onrender.com/listings" class="btn btn-primary">View Project</a>
-                        </div>
+            <div class="project-card animate-on-scroll delay-2">
+                <div class="project-image">
+                    <i class="fas fa-pen-fancy"></i>
+                </div>
+                <div class="project-content">
+                    <h3>PostingShala - CRUD Web App</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Dec 2024 - Jan 2025</div>
+                    <ul>
+                        <li>Developed a full-stack CRUD application for posting and managing content</li>
+                        <li>Implemented user authentication, post creation, editing, and deletion functionality</li>
+                        <li>Built with Node.js and Express for the backend, EJS for templating</li>
+                        <li>Technologies: Node.js, Express.js, MongoDB, EJS, Bootstrap</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://postingshala.onrender.com/" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fab fa-spotify"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Spotify Clone</h3>
-                        <div class="date">Feb 2025 - Present</div>
-                        <ul>
-                            <li>Developed a responsive clone of Spotify's main page Using only HTML AND CSS</li>
-                            <li>Implemented modern UI/UX components</li>
-                            <li>Technologies: HTML, CSS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://nicksboson.github.io/Spotify-Clone_/" class="btn btn-primary">View Project</a>
-                        </div>
+            </div>
+            <div class="project-card animate-on-scroll delay-3">
+                <div class="project-image">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Scoreasy - Landing Page</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Nov 2024</div>
+                    <ul>
+                        <li>Designed and developed a responsive landing page for a sports scoring application</li>
+                        <li>Implemented smooth animations and interactive elements</li>
+                        <li>Technologies: HTML, CSS, JavaScript</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://nicksboson.github.io/Scoreasy/" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-gamepad"></i>
+            </div>
+            <div class="project-card animate-on-scroll delay-1">
+                <div class="project-image">
+                    <i class="fab fa-spotify"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Spotify Clone</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Feb 2025 - Present</div>
+                    <ul>
+                        <li>Developed a responsive clone of Spotify's main page Using only HTML AND CSS</li>
+                        <li>Implemented modern UI/UX components</li>
+                        <li>Technologies: HTML, CSS</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://nicksboson.github.io/Spotify-Clone_/" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
                     </div>
-                    <div class="project-content">
-                        <h3>Simon Says Game</h3>
-                        <div class="date">Mar 2025 - Present</div>
-                        <ul>
-                            <li>Created an interactive memory game</li>
-                            <li>Implemented DOM manipulation and audio effects</li>
-                            <li>Technologies: HTML, CSS, JavaScript</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="https://nicksboson.github.io/SIMON-SAYS/" class="btn btn-primary">View Project</a>
-                        </div>
+                </div>
+            </div>
+            <div class="project-card animate-on-scroll delay-2">
+                <div class="project-image">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Simon Says Game</h3>
+                    <div class="date"><i class="far fa-calendar-alt"></i> Mar 2025 - Present</div>
+                    <ul>
+                        <li>Created an interactive memory game</li>
+                        <li>Implemented DOM manipulation and audio effects</li>
+                        <li>Technologies: HTML, CSS, JavaScript</li>
+                    </ul>
+                    <div class="project-links">
+                        <a href="https://nicksboson.github.io/SIMON-SAYS/" class="btn btn-primary">
+                            <i class="fas fa-external-link-alt"></i> View Project
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section class="achievements">
-        <div class="container">
-            <div class="section-title">
-                <h2>Awards & Achievements</h2>
-            </div>
-            <div class="achievements-grid">
-                <div class="achievement-card">
-                    <h3>JEE Mains 2024</h3>
-                    <p>Secured All India Rank of 28719, qualifying for admission to IIIT Sonepat (Institute of National Importance)</p>
-                </div>
-                <div class="achievement-card">
-                    <h3>JEE Advanced 2024</h3>
-                    <p>Achieved All India Rank of 22797</p>
-                </div>
-                <div class="achievement-card">
-                    <h3>Academic Excellence</h3>
-                    <p>Consistently scored 96% in both Class 10 and Class 12 CBSE examinations</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    </div>
+</section>
 
     <!-- Links Section -->
     <section class="links">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>Coding Profiles</h2>
                 <p>Connect with me on these platforms to see my work and contributions</p>
             </div>
             <div class="links-grid">
                 <!-- GitHub -->
-                <div class="link-card">
+                <div class="link-card animate-on-scroll delay-1">
                     <div class="link-icon">
                         <i class="fab fa-github"></i>
                     </div>
                     <div class="link-content">
                         <h3>GitHub</h3>
                         <p>Explore my open-source contributions and personal projects on GitHub.</p>
-                        <a href="https://github.com/nicksboson" target="_blank" class="link-btn">View Profile</a>
+                        <a href="https://github.com/nicksboson" target="_blank" class="link-btn">
+                            <i class="fas fa-external-link-alt"></i> View Profile
+                        </a>
                     </div>
                 </div>
 
                 <!-- LeetCode -->
-                <div class="link-card">
+                <div class="link-card animate-on-scroll delay-2">
                     <div class="link-icon">
                         <i class="fas fa-code"></i>
                     </div>
                     <div class="link-content">
                         <h3>LeetCode</h3>
                         <p>Check out my problem-solving progress (51 problems solved).</p>
-                        <a href="https://leetcode.com/u/nicks_boson/" target="_blank" class="link-btn">View Profile</a>
+                        <a href="https://leetcode.com/u/nicks_boson/" target="_blank" class="link-btn">
+                            <i class="fas fa-external-link-alt"></i> View Profile
+                        </a>
                     </div>
                 </div>
 
                 <!-- HackerRank -->
-                <div class="link-card">
+                <div class="link-card animate-on-scroll delay-3">
                     <div class="link-icon">
                         <i class="fab fa-hackerrank"></i>
                     </div>
                     <div class="link-content">
                         <h3>HackerRank</h3>
                         <p>4-star coder with strong problem-solving skills.</p>
-                        <a href="https://www.hackerrank.com/profile/nikhil_garkoti01" target="_blank" class="link-btn">View Profile</a>
+                        <a href="https://www.hackerrank.com/profile/nikhil_garkoti01" target="_blank" class="link-btn">
+                            <i class="fas fa-external-link-alt"></i> View Profile
+                        </a>
                     </div>
                 </div>
 
                 <!-- CodeChef -->
-                <div class="link-card">
+                <div class="link-card animate-on-scroll delay-1">
                     <div class="link-icon">
                         <i class="fas fa-utensils"></i>
                     </div>
                     <div class="link-content">
                         <h3>CodeChef</h3>
                         <p>Solved 250 C programming problems on CodeChef.</p>
-                        <a href="https://www.codechef.com/users/mob_band_91" target="_blank" class="link-btn">View Profile</a>
+                        <a href="https://www.codechef.com/users/mob_band_91" target="_blank" class="link-btn">
+                            <i class="fas fa-external-link-alt"></i> View Profile
+                        </a>
                     </div>
                 </div>
 
                 <!-- Resume -->
-                <div class="link-card">
+                <div class="link-card animate-on-scroll delay-2">
                     <div class="link-icon">
                         <i class="fas fa-file-pdf"></i>
                     </div>
                     <div class="link-content">
                         <h3>Resume</h3>
                         <p>Download or view my latest resume in PDF format.</p>
-                        <a href="Resume.pdf" target="_blank" class="link-btn" download="Nikhil_Garkoti_Resume.pdf">View Resume</a>
+                        <a href="nikhil-garkoti-resume.pdf" target="_blank" class="link-btn" download="Nikhil_Garkoti_Resume.pdf">
+                            <i class="fas fa-download"></i> View Resume
+                        </a>
                     </div>
                 </div>
             </div>
@@ -338,25 +392,25 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <div class="section-title">
+            <div class="section-title animate-on-scroll">
                 <h2>Get In Touch</h2>
                 <p>I'm always open to discussing new opportunities, projects, or just chatting about tech</p>
             </div>
-            <div class="contact-content">
+            <div class="contact-content animate-on-scroll delay-1">
                 <p>Feel free to reach out through any of the channels below. I'll do my best to respond</p>
                 
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-item animate-on-scroll delay-1">
                         <i class="fas fa-envelope"></i>
                         <h4>Email</h4>
                         <a href="mailto:nikhil.garkoti0001@gmail.com">nikhil.garkoti0001@gmail.com</a>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item animate-on-scroll delay-2">
                         <i class="fab fa-linkedin"></i>
                         <h4>LinkedIn</h4>
                         <a href="https://www.linkedin.com/in/nikhil-garkoti-027274328/" target="_blank">Connect with me</a>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item animate-on-scroll delay-3">
                         <i class="fab fa-instagram"></i>
                         <h4>Instagram</h4>
                         <a href="https://www.instagram.com/nikhil_garkoti/" target="_blank">@nikhil_garkoti</a>
@@ -380,11 +434,17 @@
                     <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
                 </div>
                 
-                <p class="copyright">&copy; 2024 Nikhil Garkoti. All rights reserved.</p>
+                <p class="copyright">&copy; <span id="year"></span> Nikhil Garkoti. All rights reserved.</p>
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
-</body>
 
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <script src="script.js"></script>
+       
+</body>
 </html>
