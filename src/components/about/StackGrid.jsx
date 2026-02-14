@@ -132,7 +132,7 @@ export default function StackGrid() {
                         {[...stack, ...stack].map((item, i) => (
                             <React.Fragment key={i}>
                                 <div className="w-8 h-8 rounded-full bg-[#111] flex-shrink-0 items-center justify-center p-1.5 overflow-hidden">
-                                    <img src={item.logo} alt={item.name} className="w-full h-full object-contain rounded-full" />
+                                    <img src={item.logo} alt={item.name} loading="lazy" className="w-full h-full object-contain rounded-full" />
                                 </div>
                                 <span className="text-[#82ff1d] text-[8px] flex-shrink-0">•</span>
                             </React.Fragment>
@@ -150,7 +150,7 @@ export default function StackGrid() {
                     >
                         <div className="flex items-center gap-6">
                             <div className="w-16 h-16 rounded-[22px] flex items-center justify-center overflow-hidden p-3 bg-white/5 group-hover:bg-white/10 transition duration-300">
-                                <img src={item.logo} alt={item.name} className="w-full h-full object-contain rounded-full" />
+                                <img src={item.logo} alt={item.name} loading="lazy" className="w-full h-full object-contain rounded-full" />
                             </div>
                             <div>
                                 <h3 className="text-xl font-medium text-white">{item.name}</h3>
@@ -192,7 +192,7 @@ export default function StackGrid() {
                             {/* Header */}
                             <div className="flex items-center gap-6">
                                 <div className="w-20 h-20 rounded-3xl bg-white/5 flex items-center justify-center p-4 border border-white/5">
-                                    <img src={selectedTech.logo} alt={selectedTech.name} className="w-full h-full object-contain rounded-xl" />
+                                    <img src={selectedTech.logo} alt={selectedTech.name} loading="lazy" className="w-full h-full object-contain rounded-xl" />
                                 </div>
                                 <div>
                                     <h2 className="text-4xl font-semibold tracking-tight text-white mb-2">{selectedTech.name}</h2>

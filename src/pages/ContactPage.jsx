@@ -151,7 +151,7 @@ export default function ContactPage() {
                 {/* Profile */}
                 <div ref={profileRef} className="mb-24 animate-from-left">
                     <div className="w-16 h-16 rounded-full overflow-hidden mb-6 border border-white/5">
-                        <img src={image} alt="Nikhil Garkoti" className="w-full h-full object-cover scale-110" />
+                        <img src={image} alt="Nikhil Garkoti" loading="lazy" className="w-full h-full object-cover scale-110" />
                     </div>
                     <p className="text-[20px] leading-relaxed max-w-[500px]">
                         <span className="text-white font-medium">I'm Nikhil Garkoti,</span>

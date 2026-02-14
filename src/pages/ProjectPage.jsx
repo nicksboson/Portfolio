@@ -80,25 +80,28 @@ export default function ProjectPage() {
                     className="rounded-3xl p-6 md:p-10 overflow-hidden"
                     style={{ backgroundColor: project.bgColor }}
                 >
-                    <div className="overflow-hidden rounded-xl">
+                    <div className="overflow-hidden rounded-xl aspect-video bg-white/5 relative">
                         {project.video ? (
                             <video
                                 src={project.video}
+                                poster={project.image}
                                 autoPlay
                                 loop
                                 muted
                                 playsInline
+                                preload="metadata"
                                 disablePictureInPicture
                                 controlsList="nodownload nofullscreen noremoteplayback"
                                 onContextMenu={(e) => e.preventDefault()}
                                 onPause={(e) => e.target.play()}
-                                className="w-full h-auto object-cover pointer-events-none select-none"
+                                className="w-full h-full object-cover pointer-events-none select-none absolute inset-0"
                             />
                         ) : (
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-auto object-cover"
+                                loading="lazy"
+                                className="w-full h-full object-cover shadow-2xl absolute inset-0"
                             />
                         )}
                     </div>
@@ -222,6 +225,7 @@ export default function ProjectPage() {
                                     <img
                                         src={p.image}
                                         alt={p.title}
+                                        loading="lazy"
                                         className="w-full h-[240px] object-cover"
                                     />
                                 </div>

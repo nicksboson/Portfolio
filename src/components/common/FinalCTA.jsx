@@ -14,7 +14,7 @@ export default function FinalCTA() {
             <div ref={profileRef} className="mb-24 animate-from-left">
                 {/* Avatar */}
                 <div className="w-16 h-16 rounded-full overflow-hidden mb-6 border border-white/5">
-                    <img src={image} alt="image" className="w-full h-full object-cover scale-110" />
+                    <img src={image} alt="image" loading="lazy" className="w-full h-full object-cover scale-110" />
                 </div>
 
                 {/* Bio Text */}

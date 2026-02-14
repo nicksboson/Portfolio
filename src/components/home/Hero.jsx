@@ -11,8 +11,8 @@ export default function Hero() {
             {/* Profile block */}
             <div className="flex items-center gap-4 mb-8 animate-entry-slide delay-100">
                 {/* Avatar */}
-                <div className="w-14 h-14 rounded-full overflow-hidden">
-                    <img src={image} alt="image" className="w-full h-full object-cover scale-110" />
+                <div className="w-14 h-14 rounded-full overflow-hidden bg-[#262626]">
+                    <img src={image} alt="image" fetchpriority="high" className="w-full h-full object-cover scale-110" />
                 </div>
 
                 {/* Name + socials */}

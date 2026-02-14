@@ -27,6 +27,7 @@ export default function ShowcaseCard({
                         <img
                             src={image}
                             alt={title}
+                            loading="lazy"
                             className="w-full h-[450px] object-cover transition duration-500"
                         />
                     </div>

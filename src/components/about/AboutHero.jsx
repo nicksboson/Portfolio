@@ -21,6 +21,7 @@ export default function AboutHero() {
                     <img
                         src={image}
                         alt="Nikhil Garkoti"
+                        loading="lazy"
                         className="w-full h-full object-cover"
                     />
                 </div>
