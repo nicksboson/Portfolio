@@ -8,7 +8,7 @@ import StackGrid from "../components/about/StackGrid";
 
 export default function AboutPage() {
     return (
-        <div className="w-full px-10 lg:px-20 animate-entry-fade pb-20">
+        <div className="w-full px-4 sm:px-6 md:px-10 lg:px-20 animate-entry-fade pb-20">
             <Navbar />
             <div className="animate-entry-slide">
                 <AboutHero />

@@ -8,7 +8,7 @@ import FinalCTA from "../components/common/FinalCTA";
 
 export default function HomePage() {
     return (
-        <div className="w-full px-10 lg:px-20 animate-entry-fade">
+        <div className="w-full px-4 sm:px-6 md:px-10 lg:px-20 animate-entry-fade">
             <Navbar />
             <Hero />
             <ShowcaseSection />

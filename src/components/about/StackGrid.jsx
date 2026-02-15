@@ -97,25 +97,22 @@ export default function StackGrid() {
     useEffect(() => {
         if (selectedTech) {
             document.body.style.overflow = "hidden";
-            document.body.style.paddingRight = "15px"; // Prevent layout shift
         } else {
             document.body.style.overflow = "unset";
-            document.body.style.paddingRight = "0";
         }
         return () => {
             document.body.style.overflow = "unset";
-            document.body.style.paddingRight = "0";
         };
     }, [selectedTech]);
 
     return (
-        <section className="mt-32 relative">
+        <section className="mt-16 sm:mt-24 md:mt-32 relative">
             <style>{marqueeStyle}</style>
-            <div ref={headerRef} className="flex items-baseline gap-4 mb-12 animate-on-scroll">
-                <h2 className="text-[48px] font-medium tracking-[-1px]">My Stack</h2>
-                <div className="flex-1 h-px bg-[#262626] mx-4 self-center" />
+            <div ref={headerRef} className="flex flex-col sm:flex-row items-start sm:items-baseline gap-3 sm:gap-4 mb-8 sm:mb-10 md:mb-12 animate-on-scroll">
+                <h2 className="text-3xl sm:text-4xl md:text-[48px] font-medium tracking-[-1px]">My Stack</h2>
+                <div className="hidden sm:block flex-1 h-px bg-[#262626] mx-4 self-center" />
                 <div
-                    className="overflow-hidden relative"
+                    className="hidden sm:block overflow-hidden relative"
                     style={{
                         width: "280px",
                         maskImage: "linear-gradient(to right, transparent 0%, black 20%, black 80%, transparent 100%)",
@@ -141,24 +138,24 @@ export default function StackGrid() {
                 </div>
             </div>
 
-            <div ref={listRef} className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-stagger">
+            <div ref={listRef} className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-5 md:gap-6 animate-stagger">
                 {stack.map((item, index) => (
                     <div
                         key={index}
                         onClick={() => setSelectedTech(item)}
-                        className="p-8 rounded-[32px] bg-[#0A0A0A] border border-white/5 flex items-center justify-between group hover:bg-[#0E0E0E] hover:border-white/10 transition-all duration-300 cursor-pointer"
+                        className="p-5 sm:p-6 md:p-8 rounded-2xl sm:rounded-[32px] bg-[#0A0A0A] border border-white/5 flex items-center justify-between group hover:bg-[#0E0E0E] hover:border-white/10 transition-all duration-300 cursor-pointer"
                     >
-                        <div className="flex items-center gap-6">
-                            <div className="w-16 h-16 rounded-[22px] flex items-center justify-center overflow-hidden p-3 bg-white/5 group-hover:bg-white/10 transition duration-300">
+                        <div className="flex items-center gap-4 sm:gap-5 md:gap-6">
+                            <div className="w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-xl sm:rounded-2xl md:rounded-[22px] flex items-center justify-center overflow-hidden p-2 sm:p-3 bg-white/5 group-hover:bg-white/10 transition duration-300 shrink-0">
                                 <img src={item.logo} alt={item.name} loading="lazy" className="w-full h-full object-contain rounded-full" />
                             </div>
-                            <div>
-                                <h3 className="text-xl font-medium text-white">{item.name}</h3>
-                                <p className="text-[#878686] text-sm mt-1">{item.category}</p>
+                            <div className="min-w-0">
+                                <h3 className="text-lg sm:text-xl font-medium text-white">{item.name}</h3>
+                                <p className="text-[#878686] text-xs sm:text-sm mt-0.5 sm:mt-1 truncate">{item.category}</p>
                             </div>
                         </div>
-                        <span className="text-[#878686] group-hover:text-[#82ff1d] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <span className="text-[#878686] group-hover:text-[#82ff1d] group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300 shrink-0 ml-2">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5">
                                 <line x1="7" y1="17" x2="17" y2="7" /><polyline points="7 7 17 7 17 17" />
                             </svg>
                         </span>
@@ -169,34 +166,34 @@ export default function StackGrid() {
             {/* Modal Portal */}
             {selectedTech && createPortal(
                 <div
-                    className="fixed inset-0 z-[9999] flex items-center justify-center p-6 bg-black/90 backdrop-blur-md"
+                    className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-6 bg-black/90 backdrop-blur-md"
                     style={{ animation: "overlay-fade-in 0.3s ease-out forwards" }}
                     onClick={() => setSelectedTech(null)}
                 >
                     <div
-                        className="relative w-full max-w-2xl bg-[#111] border border-white/10 rounded-[40px] p-10 md:p-14 overflow-hidden"
+                        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-[#111] border border-white/10 rounded-2xl sm:rounded-[40px] p-6 sm:p-8 md:p-10 lg:p-14"
                         style={{ animation: "modal-fade-in 0.4s cubic-bezier(0.2, 1, 0.3, 1) forwards" }}
                         onClick={(e) => e.stopPropagation()}
                     >
                         {/* Close Button */}
                         <button
                             onClick={() => setSelectedTech(null)}
-                            className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#82ff1d] hover:text-black hover:border-[#82ff1d] transition-all duration-300 group z-10"
+                            className="absolute top-4 sm:top-6 md:top-8 right-4 sm:right-6 md:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white hover:bg-[#82ff1d] hover:text-black hover:border-[#82ff1d] transition-all duration-300 group z-10"
                         >
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="sm:w-6 sm:h-6">
                                 <line x1="18" y1="6" x2="6" y2="18" /><line x1="6" y1="6" x2="18" y2="18" />
                             </svg>
                         </button>
 
-                        <div className="flex flex-col gap-8 relative z-0">
+                        <div className="flex flex-col gap-6 sm:gap-8 relative z-0">
                             {/* Header */}
-                            <div className="flex items-center gap-6">
-                                <div className="w-20 h-20 rounded-3xl bg-white/5 flex items-center justify-center p-4 border border-white/5">
+                            <div className="flex items-center gap-4 sm:gap-6 pr-12">
+                                <div className="w-14 h-14 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl sm:rounded-2xl md:rounded-3xl bg-white/5 flex items-center justify-center p-3 sm:p-4 border border-white/5 shrink-0">
                                     <img src={selectedTech.logo} alt={selectedTech.name} loading="lazy" className="w-full h-full object-contain rounded-xl" />
                                 </div>
-                                <div>
-                                    <h2 className="text-4xl font-semibold tracking-tight text-white mb-2">{selectedTech.name}</h2>
-                                    <p className="text-[#82ff1d] font-medium tracking-wide text-sm uppercase">{selectedTech.category}</p>
+                                <div className="min-w-0">
+                                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-white mb-1 sm:mb-2">{selectedTech.name}</h2>
+                                    <p className="text-[#82ff1d] font-medium tracking-wide text-xs sm:text-sm uppercase truncate">{selectedTech.category}</p>
                                 </div>
                             </div>
 
@@ -204,21 +201,21 @@ export default function StackGrid() {
                             <div className="h-px w-full bg-gradient-to-r from-[#262626] to-transparent" />
 
                             {/* Description Content */}
-                            <div className="space-y-8">
+                            <div className="space-y-6 sm:space-y-8">
                                 <div>
-                                    <p className="text-[#a0a0a0] text-lg leading-[1.8] font-light">
+                                    <p className="text-[#a0a0a0] text-base sm:text-lg leading-[1.7] sm:leading-[1.8] font-light">
                                         {selectedTech.description}
                                     </p>
                                 </div>
 
                                 {/* Skills Tags */}
                                 <div>
-                                    <h4 className="text-white text-sm font-semibold uppercase tracking-[1px] mb-4">In-Depth Skills</h4>
-                                    <div className="flex flex-wrap gap-2">
+                                    <h4 className="text-white text-xs sm:text-sm font-semibold uppercase tracking-[1px] mb-3 sm:mb-4">In-Depth Skills</h4>
+                                    <div className="flex flex-wrap gap-1.5 sm:gap-2">
                                         {selectedTech.skills.map((skill, i) => (
                                             <span
                                                 key={i}
-                                                className="px-4 py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-xs font-medium hover:border-[#82ff1d]/30 hover:text-white transition-all duration-300"
+                                                className="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-white/5 border border-white/10 text-white/80 text-[11px] sm:text-xs font-medium hover:border-[#82ff1d]/30 hover:text-white transition-all duration-300"
                                             >
                                                 {skill}
                                             </span>
@@ -228,7 +225,7 @@ export default function StackGrid() {
                             </div>
 
                             {/* Footer Accent */}
-                            <div className="flex items-center gap-2 text-xs font-semibold text-[#878686] uppercase tracking-[2px] mt-2">
+                            <div className="flex items-center gap-2 text-[10px] sm:text-xs font-semibold text-[#878686] uppercase tracking-[2px] mt-1 sm:mt-2">
                                 <span className="w-2 h-2 rounded-full bg-[#82ff1d]"></span>
                                 Proficiency & Expertise
                             </div>
