@@ -129,7 +129,7 @@ export default function Navbar() {
                             <a href="https://x.com/nicksbosonn" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-300 text-sm">
                                 <i className="fa-brands fa-x-twitter"></i>
                             </a>
-                            <a href="https://www.instagram.com/nikhil_garkoti/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-300 text-sm">
+                            <a href="https://www.instagram.com/nick_codedit/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-300 text-sm">
                                 <i className="fa-brands fa-instagram"></i>
                             </a>
                             <a href="https://www.linkedin.com/in/nikhil-garkoti/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-300 text-sm">

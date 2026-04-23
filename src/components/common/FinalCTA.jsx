@@ -45,7 +45,7 @@ export default function FinalCTA() {
                         <i className="fa-brands fa-x-twitter"></i>
                     </a>
                     <span className="text-[6px] text-[#82ff1d]">•</span>
-                    <a href="https://www.instagram.com/nikhil_garkoti/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-300">
+                    <a href="https://www.instagram.com/nick_codedit/" target="_blank" rel="noopener noreferrer" className="hover:text-white transition duration-300">
                         <i className="fa-brands fa-instagram"></i>
                     </a>
                     <span className="text-[6px] text-[#82ff1d]">•</span>
